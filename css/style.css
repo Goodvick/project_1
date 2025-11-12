@@ -1104,8 +1104,11 @@ a {
   }
 }
 @media (max-width: 1023px) {
+  .preview {
+    padding-bottom: 56px;
+  }
   .preview > h1 {
-    font-size: 32px;
+    font-size: 35px;
   }
   .preview > p {
     font-size: 16px;
@@ -1143,36 +1146,11 @@ a {
     width: 100%;
   }
   .preview .preview__send {
-    top: 515px;
-    right: -15vw;
-    width: 190px;
-    height: 100px;
-  }
-  .preview .preview__send .preview__send-svg > svg {
-    width: 34px;
-    height: 34px;
-  }
-  .preview .preview__send .preview__send-svg .preview__send-text {
-    margin-left: 8px;
-  }
-  .preview .preview__send .preview__send-svg .preview__send-text .text-p-about {
-    font-size: 13px;
-    margin-bottom: 3px;
-  }
-  .preview .preview__send .preview__send-svg .preview__send-text .text-p {
-    font-size: 10px;
-  }
-  .preview .preview__send .preview__send-icon {
-    padding-top: 10px;
-    padding-right: 65px;
-  }
-  .preview .preview__send .preview__send-icon > img {
-    width: 25px;
-    height: 25px;
-  }
-  .preview .preview__send .preview__send-icon > svg {
-    width: 25px;
-    height: 25px;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 20px;
   }
   .preview .preview__fly {
     width: 100px;
@@ -1205,16 +1183,40 @@ a {
     left: -7vw;
     background-color: white;
   }
+  .preview .preview__send {
+    width: 190px;
+    height: 100px;
+    margin-top: 14px;
+  }
+  .preview .preview__send .preview__send-svg > svg {
+    width: 34px;
+    height: 34px;
+  }
+  .preview .preview__send .preview__send-svg .preview__send-text {
+    margin-left: 8px;
+  }
+  .preview .preview__send .preview__send-svg .preview__send-text .text-p-about {
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+  .preview .preview__send .preview__send-svg .preview__send-text .text-p {
+    font-size: 10px;
+  }
+  .preview .preview__send .preview__send-icon {
+    padding-top: 10px;
+    padding-right: 65px;
+  }
+  .preview .preview__send .preview__send-icon > img {
+    width: 25px;
+    height: 25px;
+  }
+  .preview .preview__send .preview__send-icon > svg {
+    width: 25px;
+    height: 25px;
+  }
   .preview .preview__video {
     margin-top: 22px;
     border-radius: 10px;
-  }
-  .preview .preview__send {
-    position: relative;
-    top: 0;
-    right: 0;
-    margin: 0 auto;
-    margin-top: 14px;
   }
   .preview .preview__fly {
     width: 80px;
@@ -1226,7 +1228,7 @@ a {
     width: 90%;
   }
   .preview > h1 {
-    font-size: 18px;
+    font-size: 19px;
     margin-bottom: 4px;
   }
   .preview > p {
@@ -1377,6 +1379,13 @@ a {
   margin-right: 0px;
 }
 @media (max-width: 1200px) {
+  .about {
+    padding-bottom: 63px;
+  }
+  .about > h3 {
+    width: 525px;
+    font-size: 36px;
+  }
   .about .about__flex .about__flex-slider > div {
     flex: 0 0 31.914%;
     width: 31.914%;
@@ -1391,8 +1400,8 @@ a {
     font-size: 13px;
   }
   .about > h3 {
-    width: 444px;
-    font-size: 30px;
+    width: 464px;
+    font-size: 32px;
   }
   .about .about__flex .about__flex-slider > div {
     flex: 0 0 48.936%;
@@ -1404,13 +1413,16 @@ a {
   }
 }
 @media (max-width: 767px) {
+  .about {
+    padding-bottom: 28px;
+  }
   .about > h2 {
     font-size: 12px;
   }
   .about > h3 {
     width: 384px;
     font-size: 26px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
   .about .about__flex .about__flex-slider > div {
     flex: 0 0 100%;
@@ -1429,14 +1441,14 @@ a {
 }
 @media (max-width: 576px) {
   .about {
-    width: 94%;
+    width: 90%;
   }
   .about > h2 {
     font-size: 10px;
   }
   .about > h3 {
-    width: 264px;
-    font-size: 18px;
+    width: 284px;
+    font-size: 19px;
   }
   .about .about__flex .about__flex-slider > div {
     height: 214px;
@@ -1470,7 +1482,8 @@ a {
   color: #444bd3;
 }
 .payments > h3 {
-  width: 604px;
+  width: -moz-fit-content;
+  width: fit-content;
   font-weight: 700;
   font-size: 40px;
   line-height: 140%;
@@ -1517,11 +1530,12 @@ a {
   list-style: none;
 }
 .payments .payments__grid .payments__grid-list > li > div {
+  display: grid;
+  align-items: center;
+  justify-content: center;
   width: 16px;
   height: 16px;
   background-color: #90ecf4;
-  text-align: center;
-  line-height: 100%;
   border-radius: 10px;
 }
 .payments .payments__grid .payments__grid-list .payments__grid-row {
@@ -1550,14 +1564,96 @@ a {
   }
 }
 @media (max-width: 1200px) {
+  .payments {
+    padding-top: 63px;
+    padding-bottom: 63px;
+  }
+  .payments > h3 {
+    font-size: 36px;
+  }
   .payments .payments__grid {
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
     gap: 35px;
   }
+  .payments .payments__grid div > h4 {
+    font-size: 24px;
+  }
+  .payments .payments__grid > div > p {
+    font-size: 20px;
+  }
   .payments .payments__grid .payments__grid-box {
-    top: 34.5vw;
-    right: 0vw;
+    top: 52%;
+  }
+  .payments .payments__grid .payments__grid-list {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1024px) {
+  .payments > h2 {
+    font-size: 13px;
+  }
+  .payments > h3 {
+    font-size: 32px;
+  }
+  .payments .payments__grid div > h4 {
+    font-size: 20px;
+  }
+  .payments .payments__grid > div > p {
+    font-size: 16px;
+  }
+  .payments .payments__grid .payments__grid-list {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .payments {
+    padding-top: 24px;
+  }
+  .payments > h2 {
+    font-size: 12px;
+  }
+  .payments > h3 {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+  .payments .payments__grid div > h4 {
+    font-size: 18px;
+  }
+  .payments .payments__grid > div > p {
+    font-size: 14px;
+  }
+  .payments .payments__grid .payments__grid-box {
+    top: 55%;
+  }
+  .payments .payments__grid .payments__grid-list {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .payments {
+    padding-left: 5%;
+    padding-bottom: 5%;
+  }
+  .payments > h2 {
+    font-size: 10px;
+  }
+  .payments > h3 {
+    font-size: 19px;
+    margin-bottom: 25px;
+  }
+  .payments .payments__grid div > h4 {
+    font-size: 14px;
+  }
+  .payments .payments__grid > div > p {
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+  .payments .payments__grid .payments__grid-img {
+    margin-bottom: 15px;
+  }
+  .payments .payments__grid .payments__grid-list {
+    font-size: 8px;
   }
 }
 
