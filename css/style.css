@@ -1707,21 +1707,25 @@ a {
   }
 }
 @media (max-width: 767px) {
+  .subscription {
+    padding: 34px;
+  }
   .subscription .subscription__block .subscription__block-about {
-    font-size: 23px;
+    font-size: 20px;
   }
   .subscription .subscription__block .subscription__block-text {
-    font-size: 12px;
+    font-size: 9px;
+    margin-bottom: 10px;
   }
   .subscription .subscription__btn {
-    width: 160px;
-    height: 42px;
-    font-size: 14px;
+    width: 120px;
+    height: 32px;
+    font-size: 10px;
   }
 }
 @media (max-width: 576px) {
   .subscription {
-    width: 90%;
+    padding: 18px;
   }
   .subscription .subscription__block {
     width: 280px;
@@ -1734,17 +1738,16 @@ a {
   padding: 96px 0;
 }
 .suggestion .suggestion__block {
-  width: 51.667%;
+  width: 620px;
   margin: 0 auto;
 }
 .suggestion .suggestion__block .suggestion__about {
-  width: 83.334%;
+  width: 100%;
   font-weight: 700;
   font-size: 44px;
   line-height: 140%;
   color: white;
   text-align: center;
-  margin: 0 auto;
   margin-bottom: 20px;
 }
 .suggestion .suggestion__block .suggestion__text {
@@ -1770,6 +1773,53 @@ a {
 }
 .suggestion .suggestion__block .suggestion__btn:hover {
   filter: brightness(75%);
+}
+@media (max-width: 1024px) {
+  .suggestion .suggestion__block {
+    width: 580px;
+  }
+  .suggestion .suggestion__block .suggestion__about {
+    font-size: 40px;
+  }
+  .suggestion .suggestion__block .suggestion__text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .suggestion {
+    padding-top: 69px;
+    padding-bottom: 69px;
+  }
+  .suggestion .suggestion__block {
+    width: 520px;
+  }
+  .suggestion .suggestion__block .suggestion__about {
+    font-size: 36px;
+  }
+  .suggestion .suggestion__block .suggestion__text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .suggestion {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .suggestion .suggestion__block {
+    width: 280px;
+  }
+  .suggestion .suggestion__block .suggestion__about {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .suggestion .suggestion__block .suggestion__text {
+    font-size: 11px;
+  }
+  .suggestion .suggestion__block .suggestion__btn {
+    width: 111px;
+    height: 32px;
+    font-size: 10px;
+  }
 }
 
 .ref {
