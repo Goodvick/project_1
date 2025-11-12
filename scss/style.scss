@@ -1168,10 +1168,12 @@ a {
   width: 78.334%;
   padding: 56px 0 63px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 284px 193px 192px 195px 55px;
+  grid-template-rows: auto;
+  justify-content: center;
   align-items: start;
   .ref__about {
-    width: 32%;
     margin-right: 24px;
     .logo {
       width: 20.9px;
@@ -1206,18 +1208,19 @@ a {
   }
   .ref__solitions {
     padding: 0;
-    margin-right: 108px;
+    margin: 0;
   }
   .ref__support {
     padding: 0;
-    margin-right: 82px;
+    margin: 0;
   }
   .ref__company {
     padding: 0;
-    margin-right: 115px;
+    margin: 0;
   }
   .ref__legal {
     padding: 0;
+    margin: 0;
   }
   .ref__about-text {
     font-weight: 600;
@@ -1233,6 +1236,87 @@ a {
     line-height: 180%;
     margin-bottom: 8px;
   }
+  @media (max-width: $breakpoint_xl) {
+    width: 90%;
+    grid-template-columns: 193px 192px 195px 55px;
+    grid-template-rows: auto auto;
+    row-gap: 45px;
+    .ref__about {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      margin-right: 0;
+    }
+    .ref__solitions {
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
+    .ref__support {
+      grid-column-start: 2;
+      grid-row-start: 2;
+    }
+    .ref__company {
+      grid-column-start: 3;
+      grid-row-start: 2;
+    }
+    .ref__legal {
+      grid-column-start: 4;
+      grid-row-start: 2;
+    }
+  }
+  @media (max-width: $breakpoint_md) {
+    grid-template-columns: 193px 192px 80px;
+    grid-template-rows: auto auto;
+    row-gap: 45px;
+     padding: 32px 0 23px;
+    .ref__about {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      margin-right: 15px;
+    }
+    .ref__solitions {
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
+    .ref__support {
+      grid-column-start: 2;
+      grid-row-start: 2;
+    }
+    .ref__company {
+      grid-column-start: 3;
+      grid-row-start: 2;
+    }
+    .ref__legal {
+      grid-column-start: 3;
+      grid-row-start: 1;
+    }
+  }
+  @media (max-width: $breakpoint_sm) {
+    grid-template-columns: 170px 110px;
+    grid-template-rows: auto auto auto;
+    row-gap: 25px;
+    padding-bottom: 16px;
+    .ref__about {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      margin-right: 0;
+    }
+    .ref__solitions {
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
+    .ref__support {
+      grid-column-start: 2;
+      grid-row-start: 2;
+    }
+    .ref__company {
+      grid-column-start: 1;
+      grid-row-start: 3;
+    }
+    .ref__legal {
+      grid-column-start: 2;
+      grid-row-start: 3;
+    }
+  }
 }
 .copyright {
   width: 78.334%;
@@ -1243,4 +1327,10 @@ a {
   font-size: 16px;
   line-height: 180%;
   color: #1211278f;
+  @media (max-width: $breakpoint_md) {
+    padding: 27px 0;
+  }
+  @media (max-width: $breakpoint_sm) {
+    padding: 12px 0;
+  }
 }
