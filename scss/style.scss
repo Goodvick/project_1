@@ -86,7 +86,7 @@ a {
         & > input {
           display: block;
           width: 318px;
-          padding: 15px;
+          padding: 12px 0 12px 20px;
           box-sizing: border-box;
           border: 1px solid #d9d9d9;
           border-radius: 10px;
@@ -99,7 +99,7 @@ a {
         }
         & > button {
           width: 318px;
-          padding: 15px;
+          padding: 13px 0;
           box-sizing: border-box;
           font-weight: 600;
           font-size: 20px;
@@ -149,6 +149,15 @@ a {
       }
     }
   }
+  @media (max-width: $breakpoint_xl) {
+    .dialog-window {
+      width: 850px;
+      height: 590px;
+      .dialog-window__icon {
+        height: 590px;
+      }
+    }
+  }
   @media (max-width: $breakpoint_lg) {
     .dialog-window {
       width: 720px;
@@ -188,7 +197,7 @@ a {
           }
         }
         .dialog-window__text {
-          width: 298px;
+          width: 290px;
           font-size: 14px;
         }
       }
@@ -208,12 +217,12 @@ a {
   @media (max-width: $breakpoint_sm) {
     .dialog-window {
       width: 290px;
-      height: 588px;
+      height: 460px;
       flex-direction: column-reverse;
       .dialog-window__block {
         width: 100%;
         .dialog-window__dlex {
-            margin-top: 15px;
+          margin-top: 10px;
           margin-bottom: 8px;
         }
         .dialog-window__about {
@@ -242,9 +251,10 @@ a {
         }
         .dialog-window__text {
           width: 260px;
-          font-size: 12px;
+          font-size: 11px;
           margin-top: 8px;
-          margin-bottom: 28px;
+          text-align: center;
+          margin-bottom: 15px;
         }
       }
       .dialog-window__icon {
@@ -450,19 +460,20 @@ a {
   }
   .preview__fly {
     position: absolute;
-    top: 713px;
+    top: 700px;
     left: -80px;
   }
-  @media (min-width: 2000px) {
-    .preview__gift {
-      top: 240px;
-      left: -55px;
-    }
+  @media (min-width: 1500px) {
     .preview__video {
-      width: 90%;
+      width: 80%;
     }
     .preview__send {
-      top: 40.5vw;
+      top: 45vw;
+    }
+    .preview__fly {
+      position: absolute;
+      top: 45vw;
+      left: -80px;
     }
   }
   @media (min-width: 1800px) {
@@ -474,12 +485,16 @@ a {
       right: -90px;
     }
   }
-  @media (min-width: 1500px) {
+  @media (min-width: 2000px) {
+    .preview__gift {
+      top: 240px;
+      left: -55px;
+    }
     .preview__video {
-      width: 80%;
+      width: 90%;
     }
     .preview__send {
-      top: 45vw;
+      top: 40.5vw;
     }
   }
   @media (max-width: $breakpoint_xxl) {
@@ -529,7 +544,7 @@ a {
     }
   }
   @media (max-width: 1023px) {
-    padding-bottom: 56px;
+    padding-bottom: 44px;
     & > h1 {
       font-size: 35px;
     }
@@ -573,7 +588,7 @@ a {
       top: 0;
       right: 0;
       margin: 0 auto;
-      margin-top: 20px;
+      margin-top: 30px;
     }
     .preview__fly {
       width: 100px;
@@ -583,6 +598,7 @@ a {
     }
   }
   @media (max-width: $breakpoint_md) {
+    padding-bottom: 34px;
     & > h1 {
       font-size: 26px;
       margin-bottom: 4px;
@@ -609,7 +625,7 @@ a {
     .preview__send {
       width: 190px;
       height: 100px;
-      margin-top: 14px;
+      margin-top: 20px;
       .preview__send-svg {
         & > svg {
           width: 34px;
@@ -694,7 +710,7 @@ a {
       margin-top: 14px;
     }
     .preview__send {
-      margin-top: 8px;
+      margin-top: 15px;
     }
     .preview__fly {
       display: none;
@@ -746,6 +762,7 @@ a {
         font-size: 14px;
         line-height: 180%;
         margin: 0;
+        padding-bottom: 15px;
       }
     }
     .about__flex-btn {
@@ -855,7 +872,7 @@ a {
     }
   }
   @media (max-width: $breakpoint_md) {
-    padding-bottom: 28px;
+    padding-bottom: 24px;
     & > h2 {
       font-size: 12px;
     }
@@ -974,7 +991,7 @@ a {
       width: 35.507%;
       position: absolute;
       right: 0;
-      top: 19vw;
+      top: 22vw;
       box-shadow: 0 20px 50px 0 #12112714;
     }
     .payments__grid-list {
@@ -1004,7 +1021,7 @@ a {
       }
     }
   }
-  @media (min-width: 1700px) {
+  @media (min-width: 1637px) {
     .payments__grid {
       .payments__grid-box {
         top: 18vw;
@@ -1068,6 +1085,7 @@ a {
   }
   @media (max-width: $breakpoint_md) {
     padding-top: 24px;
+    padding-bottom: 34px;
     & > h2 {
       font-size: 12px;
     }
@@ -1092,7 +1110,8 @@ a {
   }
   @media (max-width: $breakpoint_sm) {
     padding-left: 5%;
-    padding-bottom: 5%;
+    padding-right: 5%;
+    padding-bottom: 18px;
     & > h2 {
       font-size: 10px;
     }
@@ -1102,17 +1121,17 @@ a {
     }
     .payments__grid {
       & div > h4 {
-        font-size: 14px;
+        font-size: 16px;
       }
       & > div > p {
-        font-size: 10px;
+        font-size: 12px;
         margin-bottom: 15px;
       }
       .payments__grid-img {
         margin-bottom: 15px;
       }
       .payments__grid-list {
-        font-size: 8px;
+        font-size: 10px;
       }
     }
   }
@@ -1196,15 +1215,16 @@ a {
   background-color: #444bd3;
   padding: 96px 0;
   .suggestion__block {
-    width: 620px;
+    width: 744px;
     margin: 0 auto;
     .suggestion__about {
-      width: 100%;
+      width: 620px;
       font-weight: 700;
       font-size: 44px;
       line-height: 140%;
       color: white;
       text-align: center;
+      margin: 0 auto;
       margin-bottom: 20px;
     }
     .suggestion__text {
@@ -1236,6 +1256,7 @@ a {
     .suggestion__block {
       width: 580px;
       .suggestion__about {
+        width: 100%;
         font-size: 40px;
       }
       .suggestion__text {
@@ -1281,7 +1302,7 @@ a {
   padding: 56px 0 63px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 284px 193px 192px 195px 55px;
+  grid-template-columns: 384px 193px 192px 195px 55px;
   grid-template-rows: auto;
   justify-content: center;
   align-items: start;
@@ -1441,8 +1462,10 @@ a {
   color: #1211278f;
   @media (max-width: $breakpoint_md) {
     padding: 27px 0;
+    font-size: 14px;
   }
   @media (max-width: $breakpoint_sm) {
     padding: 12px 0;
+    font-size: 12px;
   }
 }

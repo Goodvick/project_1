@@ -773,7 +773,7 @@ a {
 .dialog-window-bkgr .dialog-window .dialog-window__block .dialog-window__form > input {
   display: block;
   width: 318px;
-  padding: 15px;
+  padding: 12px 0 12px 20px;
   box-sizing: border-box;
   border: 1px solid #d9d9d9;
   border-radius: 10px;
@@ -786,7 +786,7 @@ a {
 }
 .dialog-window-bkgr .dialog-window .dialog-window__block .dialog-window__form > button {
   width: 318px;
-  padding: 15px;
+  padding: 13px 0;
   box-sizing: border-box;
   font-weight: 600;
   font-size: 20px;
@@ -833,6 +833,15 @@ a {
   background-color: white;
   color: red;
 }
+@media (max-width: 1200px) {
+  .dialog-window-bkgr .dialog-window {
+    width: 850px;
+    height: 590px;
+  }
+  .dialog-window-bkgr .dialog-window .dialog-window__icon {
+    height: 590px;
+  }
+}
 @media (max-width: 1024px) {
   .dialog-window-bkgr .dialog-window {
     width: 720px;
@@ -872,7 +881,7 @@ a {
     font-size: 18px;
   }
   .dialog-window-bkgr .dialog-window .dialog-window__block .dialog-window__text {
-    width: 298px;
+    width: 290px;
     font-size: 14px;
   }
   .dialog-window-bkgr .dialog-window .dialog-window__icon {
@@ -890,14 +899,14 @@ a {
 @media (max-width: 576px) {
   .dialog-window-bkgr .dialog-window {
     width: 290px;
-    height: 588px;
+    height: 460px;
     flex-direction: column-reverse;
   }
   .dialog-window-bkgr .dialog-window .dialog-window__block {
     width: 100%;
   }
   .dialog-window-bkgr .dialog-window .dialog-window__block .dialog-window__dlex {
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 8px;
   }
   .dialog-window-bkgr .dialog-window .dialog-window__block .dialog-window__about {
@@ -924,9 +933,10 @@ a {
   }
   .dialog-window-bkgr .dialog-window .dialog-window__block .dialog-window__text {
     width: 260px;
-    font-size: 12px;
+    font-size: 11px;
     margin-top: 8px;
-    margin-bottom: 28px;
+    text-align: center;
+    margin-bottom: 15px;
   }
   .dialog-window-bkgr .dialog-window .dialog-window__icon {
     width: 100%;
@@ -1133,19 +1143,20 @@ a {
 }
 .preview .preview__fly {
   position: absolute;
-  top: 713px;
+  top: 700px;
   left: -80px;
 }
-@media (min-width: 2000px) {
-  .preview .preview__gift {
-    top: 240px;
-    left: -55px;
-  }
+@media (min-width: 1500px) {
   .preview .preview__video {
-    width: 90%;
+    width: 80%;
   }
   .preview .preview__send {
-    top: 40.5vw;
+    top: 45vw;
+  }
+  .preview .preview__fly {
+    position: absolute;
+    top: 45vw;
+    left: -80px;
   }
 }
 @media (min-width: 1800px) {
@@ -1157,12 +1168,16 @@ a {
     right: -90px;
   }
 }
-@media (min-width: 1500px) {
+@media (min-width: 2000px) {
+  .preview .preview__gift {
+    top: 240px;
+    left: -55px;
+  }
   .preview .preview__video {
-    width: 80%;
+    width: 90%;
   }
   .preview .preview__send {
-    top: 45vw;
+    top: 40.5vw;
   }
 }
 @media (max-width: 1400px) {
@@ -1213,7 +1228,7 @@ a {
 }
 @media (max-width: 1023px) {
   .preview {
-    padding-bottom: 56px;
+    padding-bottom: 44px;
   }
   .preview > h1 {
     font-size: 35px;
@@ -1258,7 +1273,7 @@ a {
     top: 0;
     right: 0;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .preview .preview__fly {
     width: 100px;
@@ -1268,6 +1283,9 @@ a {
   }
 }
 @media (max-width: 767px) {
+  .preview {
+    padding-bottom: 34px;
+  }
   .preview > h1 {
     font-size: 26px;
     margin-bottom: 4px;
@@ -1294,7 +1312,7 @@ a {
   .preview .preview__send {
     width: 190px;
     height: 100px;
-    margin-top: 14px;
+    margin-top: 20px;
   }
   .preview .preview__send .preview__send-svg > svg {
     width: 34px;
@@ -1379,7 +1397,7 @@ a {
     margin-top: 14px;
   }
   .preview .preview__send {
-    margin-top: 8px;
+    margin-top: 15px;
   }
   .preview .preview__fly {
     display: none;
@@ -1434,6 +1452,7 @@ a {
   font-size: 14px;
   line-height: 180%;
   margin: 0;
+  padding-bottom: 15px;
 }
 .about .about__flex .about__flex-btn {
   display: flex;
@@ -1522,7 +1541,7 @@ a {
 }
 @media (max-width: 767px) {
   .about {
-    padding-bottom: 28px;
+    padding-bottom: 24px;
   }
   .about > h2 {
     font-size: 12px;
@@ -1629,7 +1648,7 @@ a {
   width: 35.507%;
   position: absolute;
   right: 0;
-  top: 19vw;
+  top: 22vw;
   box-shadow: 0 20px 50px 0 rgba(18, 17, 39, 0.0784313725);
 }
 .payments .payments__grid .payments__grid-list {
@@ -1656,7 +1675,7 @@ a {
     top: 17.5vw;
   }
 }
-@media (min-width: 1700px) {
+@media (min-width: 1637px) {
   .payments .payments__grid .payments__grid-box {
     top: 18vw;
     right: 1vw;
@@ -1717,6 +1736,7 @@ a {
 @media (max-width: 767px) {
   .payments {
     padding-top: 24px;
+    padding-bottom: 34px;
   }
   .payments > h2 {
     font-size: 12px;
@@ -1741,7 +1761,8 @@ a {
 @media (max-width: 576px) {
   .payments {
     padding-left: 5%;
-    padding-bottom: 5%;
+    padding-right: 5%;
+    padding-bottom: 18px;
   }
   .payments > h2 {
     font-size: 10px;
@@ -1751,17 +1772,17 @@ a {
     margin-bottom: 25px;
   }
   .payments .payments__grid div > h4 {
-    font-size: 14px;
+    font-size: 16px;
   }
   .payments .payments__grid > div > p {
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 15px;
   }
   .payments .payments__grid .payments__grid-img {
     margin-bottom: 15px;
   }
   .payments .payments__grid .payments__grid-list {
-    font-size: 8px;
+    font-size: 10px;
   }
 }
 
@@ -1846,16 +1867,17 @@ a {
   padding: 96px 0;
 }
 .suggestion .suggestion__block {
-  width: 620px;
+  width: 744px;
   margin: 0 auto;
 }
 .suggestion .suggestion__block .suggestion__about {
-  width: 100%;
+  width: 620px;
   font-weight: 700;
   font-size: 44px;
   line-height: 140%;
   color: white;
   text-align: center;
+  margin: 0 auto;
   margin-bottom: 20px;
 }
 .suggestion .suggestion__block .suggestion__text {
@@ -1887,6 +1909,7 @@ a {
     width: 580px;
   }
   .suggestion .suggestion__block .suggestion__about {
+    width: 100%;
     font-size: 40px;
   }
   .suggestion .suggestion__block .suggestion__text {
@@ -1935,7 +1958,7 @@ a {
   padding: 56px 0 63px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 284px 193px 192px 195px 55px;
+  grid-template-columns: 384px 193px 192px 195px 55px;
   grid-template-rows: auto;
   justify-content: center;
   align-items: start;
@@ -2103,10 +2126,12 @@ a {
 @media (max-width: 767px) {
   .copyright {
     padding: 27px 0;
+    font-size: 14px;
   }
 }
 @media (max-width: 576px) {
   .copyright {
     padding: 12px 0;
+    font-size: 12px;
   }
 }/*# sourceMappingURL=style.css.map */
