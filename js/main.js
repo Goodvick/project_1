@@ -57,7 +57,7 @@ $(document).ready(function () {
             updateCssStyleSlider(translateX)
         }
 
-        
+
         dots.removeClass('about__flex-item_active');
         dots.eq(currentSlide).addClass('about__flex-item_active')
     }
@@ -80,9 +80,38 @@ $(document).ready(function () {
                 goToSlide(currentSlide + 1)
             }, 4000)
         }
-    );
+    )
 
 
+    $('.hamburger-btn').click(function () {
+        if ($('#menu-toggle ~ .hamburger span:nth-child(2)').css('opacity') == '1') {
+            $('#menu-toggle ~ .hamburger span:nth-child(1)').css('transform', `rotate(45deg) translate(7px, 6.5px)`)
+            $('#menu-toggle ~ .hamburger span:nth-child(2)').css('opacity', `0`)
+            $('#menu-toggle ~ .hamburger span:nth-child(3)').css('transform', `rotate(-45deg) translate(6px, -6px)`)
+        } else {
+            $('#menu-toggle ~ .hamburger span:nth-child(1)').css('transform', `rotate(0deg) translate(0px, 0px)`)
+            $('#menu-toggle ~ .hamburger span:nth-child(2)').css('opacity', `1`)
+            $('#menu-toggle ~ .hamburger span:nth-child(3)').css('transform', `rotate(0deg) translate(0px, 0px)`)
+        }
+
+        if ($('.nav__links-items').css('opacity') == '0' || $('.nav__links-items').css('display') == 'none')
+            $('.nav__links-items').css({
+                'display': `flex`,
+                'opacity': `1`,
+                'visibility': `visible`
+            })
+        else
+            $('.nav__links-items').css({
+                'display': `none`,
+                'opacity': `0`,
+                'visibility': `hidden`
+            })
+
+        if ($('.account').css('transform') === 'matrix(1, 0, 0, 1, 0, 62)')
+            $('.account').css('transform', `translateY(0%)`)
+        else
+            $('.account').css('transform', `translateY(100%)`)
+    })
     $('.account__sin, .account__sup, .subscription__btn, .suggestion__btn').click(function () {
         if ($('.dialog-window-bkgr').css('display') === 'none') {
             $('.dialog-window-bkgr').css('display', 'flex')
@@ -91,6 +120,11 @@ $(document).ready(function () {
                 'height': '100vh',
                 'position': 'fixed'
             });
+            $('.nav__links-items').css('display', `none`);
+            $('.account').css('transform', `translateY(100%)`);
+            $('#menu-toggle ~ .hamburger span:nth-child(1)').css('transform', `rotate(0deg) translate(0px, 0px)`)
+            $('#menu-toggle ~ .hamburger span:nth-child(2)').css('opacity', `1`)
+            $('#menu-toggle ~ .hamburger span:nth-child(3)').css('transform', `rotate(0deg) translate(0px, 0px)`)
             video.pause()
         }
     })

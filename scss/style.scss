@@ -16,6 +16,9 @@ header {
   padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
+  #menu-toggle {
+    display: none;
+  }
 }
 a {
   text-decoration: none;
@@ -281,13 +284,11 @@ a {
     background-color: #121127;
     border-radius: 15px 50px 50px 15px;
     margin-right: 12px;
+    margin-bottom: 3px;
     box-shadow: 0 0 0 1.5px rgb(255, 255, 255), 6px 0 0 0 rgba(18, 17, 39, 0.32);
   }
   .nav__links {
     margin: 0;
-    & > li {
-      margin: 0;
-    }
     .nav__links-items {
       gap: 48px;
       margin-left: 40px;
@@ -295,6 +296,20 @@ a {
         color: #121127b8;
       }
     }
+  }
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  & > span {
+    width: 25px;
+    height: 3px;
+    background: #121127;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
   }
 }
 .account {
@@ -325,6 +340,73 @@ a {
     &:hover {
       filter: opacity(60%);
     }
+  }
+}
+@media (max-width: 1000px) {
+  .nav {
+    width: 80%;
+    .nav__links {
+      .nav__links-items {
+        gap: 26px;
+        margin-left: 18px;
+        font-size: 12px;
+      }
+    }
+  }
+  .account {
+    width: 20%;
+    justify-content: end;
+    gap: 6px;
+    .account__sin {
+      width: 72px;
+      height: 30px;
+      font-size: 12px;
+    }
+    .account__sup {
+      width: 72px;
+      height: 30px;
+      font-size: 12px;
+    }
+  }
+}
+@media (max-width: $breakpoint_md) {
+  header {
+    justify-content: space-between;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav {
+    .nav__links {
+      .nav__links-items {
+        opacity: 0;
+        visibility: hidden;
+        width: 78.244%;
+        position: absolute;
+        top: 70px;
+        right: 11%;
+        background: white;
+        flex-direction: column;
+        padding: 2rem 0;
+        margin: 0;
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+        transition: opacity 0.4s ease-in-out, visibility 0.4s;
+        z-index: 100;
+      }
+    }
+  }
+  .account {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    justify-content: center;
+    padding: 1rem;
+    transform: translateY(100%);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out;
+    z-index: 100;
   }
 }
 .preview {
