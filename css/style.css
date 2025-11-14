@@ -1861,7 +1861,7 @@ a {
     margin-bottom: 15px;
   }
   .payments .payments__grid .payments__grid-list {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -1922,7 +1922,7 @@ a {
     font-size: 20px;
   }
   .subscription .subscription__block .subscription__block-text {
-    font-size: 9px;
+    font-size: 12px;
     margin-bottom: 10px;
   }
   .subscription .subscription__btn {
@@ -2023,7 +2023,7 @@ a {
     margin-bottom: 8px;
   }
   .suggestion .suggestion__block .suggestion__text {
-    font-size: 11px;
+    font-size: 12px;
   }
   .suggestion .suggestion__block .suggestion__btn {
     width: 111px;
